@@ -1,0 +1,792 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #e5e5e5;
+    align-items: center;
+  }
+  .container {
+    display: block;
+    width: 450px;
+    height: auto;
+    background-color: #fff;
+    font-size: 20px;
+    padding: 20px;
+    margin: 167px;
+  }
+  h1 {
+    padding-top: 5px;
+    text-align: center;
+    color: #555555;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 39px;
+  }
+  .text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    color: #555555;
+    padding-top: 3px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  /* lien vers la page main */
+
+  #start {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  .spaceName {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 19px;
+    color: #555555;
+    padding-bottom: 5px;
+  }
+  input {
+    height: 30px;
+    width: 400px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    margin-top: 5px;
+    padding-left: 20px;
+  }
+  .spaceMail {
+    padding-top: 30px;
+  }
+  #btnSubmit {
+    margin-top: 15px;
+    height: 40px;
+    width: 200px;
+    background: #028a3d;
+    color: white;
+    font-size: 20px;
+    border: none;
+    margin-left: 90px;
+  }
+  #error {
+    font-size: 10px;
+    color: red;
+    padding-top: 0%;
+  }
+  
+  /* css exclusive page main*/
+  
+  .questionPage {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 550px;
+    background-color: #fff;
+    font-size: 20px;
+    padding: 20px;
+    margin: 167px;
+  }
+  p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    color: #555555;
+  }
+  .progressMarks {
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 14px;
+    line-height: 32px;
+    color: #555555;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+    width: 398px;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  #progresStatus {
+    width: 400px;
+    height: 8px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background: #dddddd;
+  }
+  .respContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .answer {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+  }
+  .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    height: 40px;
+    width: 450px;
+    padding-top: 40px;
+  }
+  .quitBtn {
+    width: 150px;
+    height: 40px;
+    background: #ec880c;
+    color: white;
+    font-size: 20px;
+    border: none;
+  }
+  .nextBtn {
+    width: 150px;
+    height: 40px;
+    /*background: rgba(2, 138, 61, 0.42);*/
+    background: #00af4c;
+    color: white;
+    font-size: 20px;
+    border: none;
+  }
+  
+  .response {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    margin-top: 30px;
+    height: 50px;
+    width: 400px;
+    padding-left: 10px;
+    gap: 10px;
+    cursor: pointer;
+  }
+  #myProgressBar {
+    background: green;
+    width: 100%;
+    height: 7px;
+    border-radius: 10px;
+    border: 1px solid green;
+  }
+  button {
+    cursor: pointer;
+  }
+  
+  /* Final page*/
+  
+  .finalContainer {
+    display: none;
+    width: 450px;
+    height: 550px;
+    background-color: #fff;
+    font-size: 20px;
+    padding: 20px;
+    margin: 167px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+ h2 {
+    font-family: "Inter";
+    width: 400px;
+    font-size: 20px;
+    height: 24.2px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #555555;
+  }
+  img {
+    border: 10px solid #24b474;
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 50px;
+    padding: 5px;
+  }
+  .marksNumber {
+    width: 400px;
+    height: 24px;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .accueil {
+    width: 150px;
+    height: 40px;
+    background: #0880d6;
+    color: white;
+    font-size: 20px;
+  }
+  :disabled{
+    background: rgba(2, 138, 61, 0.42);
+    opacity: 0.7;
+  }
+  
+  @media all and (max-width: 900px) {
+    body {
+      background-color: #e5e5e5;
+      align-items: center;
+    }
+    .container {
+      display: block;
+      width: 400px;
+      height: auto;
+      padding: 5px;
+      margin: 20px;
+      font-size: 15px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      padding-top: 10px;
+      text-align: center;
+      color: #555555;
+      font-family: "Inter";
+      font-style: normal;
+      font-size: 20px;
+    }
+    .text {
+      font-family: "Inter";
+      font-style: normal;
+      font-size: 15px;
+      text-align: center;
+      color: #555555;
+      padding-top: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    input {
+      height: 20px;
+      width: 350px;
+      background: #ffffff;
+      border: 1px solid #dddddd;
+    }
+    #btnSubmit {
+      margin-top: 10px;
+      margin-bottom: 50px;
+      height: 30px;
+      width: 150px;
+      background: #028a3d;
+      color: white;
+      font-size: 10px;
+      border: none;
+    }
+    .questionPage {
+      display: none;
+      width: auto;
+      height: auto;
+      padding: 5px;
+      margin: 20px;
+      font-size: 15px;
+      background-color: white;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    p {
+      font-family: "Inter";
+      font-style: normal;
+      font-size: 20px;
+      text-align: center;
+      color: #555555;
+      padding-top: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .progressMarks {
+      font-family: "Inter";
+      font-size: 10px;
+      color: #555555;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 400px;
+    }
+    #progresStatus {
+      align-items: center;
+      width: 400px;
+      height: 5px;
+      border-radius: 10px;
+      border: 1px solid black;
+      background: #dddddd;
+      padding-left: 0;
+      margin-left: 0;
+    }
+    .answer {
+      width: 10px;
+      height: 10px;
+    }
+  
+    .response {
+      background: #ffffff;
+      border: 1px solid #dddddd;
+      margin-top: 20px;
+      height: 30px;
+      width: 400px;
+    }
+    .btn {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      /*align-items: center;
+      align-content: center;*/
+      height: 30px;
+      padding-top: 30px;
+      padding-bottom: 40px;
+    }
+    .quitBtn {
+      height: 30px;
+      width: 150px;
+      background: #ec880c;
+      color: white;
+      font-size: 15px;
+      border: none;
+    }
+    
+    .nextBtn {
+      height: 30px;
+      width: 150px;
+      background: rgba(2, 138, 61, 0.42);
+      color: white;
+      font-size: 15px;
+      border: none;
+    }
+    #myProgressBar {
+      background: green;
+      width: auto;
+      height: 4px;
+      border-radius: 10px;
+      border: 1px solid green;
+    }
+    .finalContainer {
+      width: auto;
+      height: auto;
+      background-color: #fff;
+      font-size: 10px;
+      padding: 10px;
+      margin: 10px;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .userName {
+      font-family: "Inter";
+      width: 300px;
+      font-size: 30px;
+      height: 24.2px;
+      text-align: center;
+      margin-bottom: 25px;
+      margin-top: 50px;
+    }
+    .userMail {
+      font-family: "Inter";
+      width: 300px;
+      font-size: 15px;
+      height: 24.2px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 25px;
+    }
+    .marksNumber {
+      width: 300px;
+      height: 24px;
+      font-size: 15px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+  
+    .accueil {
+      width: 100px;
+      height: 30px;
+      background: #0880d6;
+      color: white;
+      font-size: 15px;
+      margin-bottom: 50px;
+    }
+  }
+  @media all and (max-width: 700px) {
+    body {
+      background-color: #e5e5e5;
+      align-items: center;
+    
+  }
+  .container{
+    height: fit-content;
+    width: 350px;
+  }
+  input {
+    height: 20px;
+    width: 300px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+  }
+  .questionPage {
+    height: fit-content;
+    width: 350px;
+  }
+  .progressMarks {
+    font-family: "Inter";
+    font-size: 10px;
+    color: #555555;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+  }
+  #progresStatus {
+    align-items: center;
+    width: 300px;
+    height: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background: #dddddd;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .response {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    margin-top: 20px;
+    height: 20px;
+    width: 300px;
+  }
+  .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 30px;
+    width: auto;
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+  .quitBtn {
+    height: 25px;
+    width: 80px;
+    background: #ec880c;
+    color: white;
+    font-size: 15px;
+    border: none;
+  }
+  
+  .nextBtn {
+    height: 25px;
+    width: 80px;
+    background: rgba(2, 138, 61, 0.42);
+    color: white;
+    font-size: 15px;
+    border: none;
+  }
+  .finalContainer {
+    width: 350px;
+    height: auto;
+    background-color: #fff;
+    font-size: 10px;
+    padding: 10px;
+    margin: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media all and (max-width: 500px) {
+  body {
+    background-color: #e5e5e5;
+    align-items: center;
+  
+}
+.container{
+  height: fit-content;
+  width: 350px;
+  }
+  input {
+    height: 20px;
+    width: 300px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+  }
+  .questionPage {
+    height: fit-content;
+    width: 350px;
+  }
+  .progressMarks {
+    font-family: "Inter";
+    font-size: 10px;
+    color: #555555;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+  }
+  #progresStatus {
+    align-items: center;
+    width: 300px;
+    height: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background: #dddddd;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .response {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    margin-top: 20px;
+    height: 20px;
+    width: 300px;
+  }
+  .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 30px;
+    width: auto;
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+  .quitBtn {
+    height: 25px;
+    width: 80px;
+    background: #ec880c;
+    color: white;
+    font-size: 15px;
+    border: none;
+  }
+  
+  .nextBtn {
+    height: 25px;
+    width: 80px;
+    background: rgba(2, 138, 61, 0.42);
+    color: white;
+    font-size: 15px;
+    border: none;
+  }
+  .finalContainer {
+    width: 350px;
+    height: auto;
+    background-color: #fff;
+    font-size: 10px;
+    padding: 10px;
+    margin: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media all and (max-width: 365px) {
+  body {
+    background-color: #e5e5e5;
+    align-items: center;
+  
+}
+.container{
+  height: fit-content;
+  width: 250px;
+  }
+  input {
+    height: 20px;
+    width: auto;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+  }
+  #btnSubmit {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 30px;
+    width: 150px;
+    background: #028a3d;
+    color: white;
+    font-size: 15px;
+    border: none;
+    margin-left: 25px;
+  }
+  .questionPage {
+    height: fit-content;
+    width: 250px;
+  }
+  .progressMarks {
+    font-family: "Inter";
+    font-size: 10px;
+    color: #555555;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 250px;
+  }
+  #progresStatus {
+    align-items: center;
+    width: 250px;
+    height: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background: #dddddd;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .response {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    margin-top: 20px;
+    height: 20px;
+    width: 250px;
+  }
+  .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 30px;
+    width: auto;
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+  .quitBtn {
+    height: 25px;
+    width: 80px;
+    background: #ec880c;
+    color: white;
+    font-size: 15px;
+    border: none;
+  }
+  
+  .nextBtn {
+    height: 25px;
+    width: 80px;
+    background: rgba(2, 138, 61, 0.42);
+    color: white;
+    font-size: 15px;
+    border: none;
+  }
+  .finalContainer {
+    width: 250px;
+    height: auto;
+    background-color: #fff;
+    font-size: 10px;
+    padding: 10px;
+    margin: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media all and (max-width: 300px) {
+  body {
+    background-color: #e5e5e5;
+    align-items: center;
+  
+}
+.container{
+  height: fit-content;
+  width: 250px;
+  }
+  input {
+    height: 20px;
+    width: auto;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+  }
+  #btnSubmit {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 30px;
+    width: 150px;
+    background: #028a3d;
+    color: white;
+    font-size: 15px;
+    border: none;
+    margin-left: 25px;
+  }
+  .questionPage {
+    height: fit-content;
+    width: 250px;
+  }
+  .progressMarks {
+    font-family: "Inter";
+    font-size: 10px;
+    color: #555555;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 250px;
+  }
+  #progresStatus {
+    align-items: center;
+    width: 250px;
+    height: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background: #dddddd;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .response {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    margin-top: 20px;
+    height: 20px;
+    width: 250px;
+  }
+  .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 30px;
+    width: auto;
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+  .quitBtn {
+    height: 25px;
+    width: 80px;
+    background: #ec880c;
+    color: white;
+    font-size: 15px;
+    border: none;
+  }
+  
+  .nextBtn {
+    height: 25px;
+    width: 80px;
+    background: rgba(2, 138, 61, 0.42);
+    color: white;
+    font-size: 15px;
+    border: none;
+  }
+  .finalContainer {
+    width: 250px;
+    height: auto;
+    background-color: #fff;
+    font-size: 10px;
+    padding: 10px;
+    margin: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
